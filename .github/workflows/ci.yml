@@ -13,4 +13,4 @@ jobs:
         with:
           dotnet-version: '8.0.x'
       - name: Check outdated packages
-        uses: dotnet list package --outdated
+        run: dotnet list package --outdated
