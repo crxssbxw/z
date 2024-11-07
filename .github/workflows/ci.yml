@@ -1,6 +1,6 @@
 name: Updating Packages
 
-on: [workflow-dispatch]
+on: workflow_dispatch
 
 jobs:
   watch:
