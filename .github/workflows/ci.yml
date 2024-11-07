@@ -22,4 +22,5 @@ jobs:
           title: 'Required Update packages'
           body: Update Required
           commit-message: Update PR
+          branch: new
           
