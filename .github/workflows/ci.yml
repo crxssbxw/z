@@ -21,7 +21,7 @@ jobs:
         with:
           token: ${{ secrets.TOKEN }}
           title: 'Required Update packages'
-          body: Update Required
-          commit-message: Update PR
+          body: "Update Required"
+          commit-message: "Update PR"
           branch: new
           
