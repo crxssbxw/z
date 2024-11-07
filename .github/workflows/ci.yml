@@ -13,4 +13,4 @@ jobs:
         with:
           dotnet-version: '8.0.x'
       - name: Check outdated packages
-        run: dotnet list package ./ClassLibrary1 --outdated
+        run: dotnet list ./ClassLibrary1 package --outdated
