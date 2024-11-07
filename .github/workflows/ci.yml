@@ -19,6 +19,7 @@ jobs:
       - name: Create Pull Request 
         uses: peter-evans/create-pull-request@v7
         with:
+          token: ${{ secrets.TOKEN }}
           title: 'Required Update packages'
           body: Update Required
           commit-message: Update PR
