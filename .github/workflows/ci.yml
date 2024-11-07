@@ -5,6 +5,8 @@ on: workflow_dispatch
 jobs:
   watch:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -13,4 +15,6 @@ jobs:
         with:
           dotnet-version: '8.0.x'
       - name: Check outdated packages
-        run: dotnet list ./ClassLibrary1 package --outdated
+        run: dotnet list ./ClassLibrary1 package --outdated > E.txt
+      - name: Creating pull request
+        run: gh pull-request create --title "Required update"
