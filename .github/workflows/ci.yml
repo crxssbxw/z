@@ -16,5 +16,8 @@ jobs:
           dotnet-version: '8.0.x'
       - name: Check outdated packages
         run: dotnet list ./ClassLibrary1 package --outdated > E.txt
-      - name: Creating pull request
-        run: gh pull-request create --title "Required update"
+      - name: Create Pull Request 
+        uses: peter-evans/create-pull-request@v7
+        with:
+          title: 'Required Update packages'
+          body: Update Required
